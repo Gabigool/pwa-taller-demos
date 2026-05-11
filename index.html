@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#185FA5" />
+    <title>PWA Taller — Sesión 19</title>
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-inner">
+            <span class="header-tag">PWA Taller — Sesión 19</span>
+            <h1>Demos de APIs</h1>
+            <p class="header-sub">Explora las capacidades nativas del navegador</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="grid">
+
+            <div class="card" onclick="openDemo('filesystem')">
+                <div class="card-icon">📁</div>
+                <div class="card-body">
+                    <h2>FileSystem</h2>
+                    <p>Acceso al sistema de archivos local</p>
+                    <span class="badge">File API</span>
+                </div>
+            </div>
+
+            <div class="card" onclick="openDemo('authentication')">
+                <div class="card-icon">🔐</div>
+                <div class="card-body">
+                    <h2>Authentication</h2>
+                    <p>Autenticación biométrica y por PIN</p>
+                    <span class="badge">WebAuthn</span>
+                </div>
+            </div>
+
+            <div class="card" onclick="openDemo('facedetection')">
+                <div class="card-icon">🫥</div>
+                <div class="card-body">
+                    <h2>Face detection</h2>
+                    <p>Detección de rostros en tiempo real</p>
+                    <span class="badge">Shape Detection</span>
+                </div>
+            </div>
+
+            <div class="card" onclick="openDemo('barcode')">
+                <div class="card-icon">📊</div>
+                <div class="card-body">
+                    <h2>Barcode detection</h2>
+                    <p>Lectura de códigos de barras y QR</p>
+                    <span class="badge">Shape Detection</span>
+                </div>
+            </div>
+
+            <div class="card" onclick="openDemo('screencapture')">
+                <div class="card-icon">🖥️</div>
+                <div class="card-body">
+                    <h2>Screen capture</h2>
+                    <p>Captura y grabación de pantalla</p>
+                    <span class="badge">Screen Capture</span>
+                </div>
+            </div>
+
+            <div class="card" onclick="openDemo('audio')">
+                <div class="card-icon">🎙️</div>
+                <div class="card-body">
+                    <h2>Audio Recording</h2>
+                    <p>Grabación de audio desde el micrófono</p>
+                    <span class="badge">MediaRecorder</span>
+                </div>
+            </div>
+
+            <div class="card" onclick="openDemo('orientation')">
+                <div class="card-icon">📱</div>
+                <div class="card-body">
+                    <h2>Orientation</h2>
+                    <p>Orientación del dispositivo</p>
+                    <span class="badge">Device Orientation</span>
+                </div>
+            </div>
+
+            <div class="card" onclick="openDemo('motion')">
+                <div class="card-icon">🌀</div>
+                <div class="card-body">
+                    <h2>Motion</h2>
+                    <p>Movimiento y giroscopio</p>
+                    <span class="badge">DeviceMotion</span>
+                </div>
+            </div>
+
+            <div class="card" onclick="openDemo('multitouch')">
+                <div class="card-icon">👆</div>
+                <div class="card-body">
+                    <h2>Multitouch</h2>
+                    <p>Gestos táctiles con múltiples dedos</p>
+                    <span class="badge">Touch Events</span>
+                </div>
+            </div>
+
+            <div class="card" onclick="openDemo('viewtransition')">
+                <div class="card-icon">✨</div>
+                <div class="card-body">
+                    <h2>ViewTransition</h2>
+                    <p>Animaciones de transición de vistas</p>
+                    <span class="badge">View Transitions</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Modal para los demos -->
+    <div class="modal-overlay" id="modal" onclick="closeModal(event)">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <script src="./js/demos/filesystem.js"></script>
+    <script src="./js/demos/authentication.js"></script>
+    <script src="./js/demos/facedetection.js"></script>
+    <script src="./js/demos/barcode.js"></script>
+    <script src="./js/demos/screencapture.js"></script>
+    <script src="./js/demos/audio.js"></script>
+    <script src="./js/demos/orientation.js"></script>
+    <script src="./js/demos/motion.js"></script>
+    <script src="./js/demos/multitouch.js"></script>
+    <script src="./js/demos/viewtransition.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
