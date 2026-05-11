@@ -45,7 +45,7 @@ function closeModal(e) {
 // Registrar Service Worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('/pwa-taller/sw.js')
       .then(reg => console.log('SW registrado:', reg.scope))
       .catch(err => console.log('SW error:', err));
   });
